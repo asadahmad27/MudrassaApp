@@ -35,7 +35,6 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyVH> {
     @Override
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
         holder.data = studentData.get(position);
-        holder.imageStudent.setImageResource(holder.data.getImage());
         holder.studentName.setText(holder.data.getName());
     }
 
@@ -45,13 +44,13 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyVH> {
     }
 
     public class MyVH extends RecyclerView.ViewHolder implements View.OnClickListener{
-        ImageView imageStudent;
+
         TextView studentName;
         ImageButton viewBtn, addBtn, deleteBtn;
         Student data;
         public MyVH(@NonNull View itemView) {
             super(itemView);
-            imageStudent = itemView.findViewById(R.id.studentImage);
+
             studentName = itemView.findViewById(R.id.studentName);
             viewBtn = itemView.findViewById(R.id.viewBtn);
             addBtn = itemView.findViewById(R.id.addBtn);

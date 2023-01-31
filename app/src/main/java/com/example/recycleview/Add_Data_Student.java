@@ -17,7 +17,6 @@ public class Add_Data_Student extends AppCompatActivity {
     Button btnAdd;
     TextView manzil, sabaq, sabqi, date;
     TextView name;
-    ImageView img;
 
     DBHandler db;
     @Override
@@ -31,7 +30,7 @@ public class Add_Data_Student extends AppCompatActivity {
         date = findViewById(R.id.editTextTextPersonName4);
 
         name = findViewById(R.id.studentNameAdd);
-        img = findViewById(R.id.imageView);
+
 
         btnAdd = findViewById(R.id.button);
 
@@ -40,7 +39,6 @@ public class Add_Data_Student extends AppCompatActivity {
         Intent intent = getIntent();
 
         name.setText(intent.getStringExtra("Name"));
-        img.setImageResource(R.drawable.person_24);
 
 
         btnAdd.setOnClickListener(new View.OnClickListener() {

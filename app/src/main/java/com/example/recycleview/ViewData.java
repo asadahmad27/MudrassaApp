@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -15,7 +14,7 @@ import java.util.List;
 
 public class ViewData extends AppCompatActivity {
 
-    ImageView img;
+
     TextView name;
     ListView list;
     Student student;
@@ -26,10 +25,8 @@ public class ViewData extends AppCompatActivity {
         setContentView(R.layout.activity_view_data);
 
         Intent intent = getIntent();
-        img = findViewById(R.id.imageView2);
         name = findViewById(R.id.textView);
 
-        img.setImageResource(R.drawable.person_24);
         name.setText(intent.getStringExtra("name"));
 
         list = findViewById(R.id.listData);
